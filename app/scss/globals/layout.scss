@@ -1,0 +1,73 @@
+@use '../util' as *;
+
+//For Flexbox
+.flex{
+    display: flex;
+    &__jc-sb{
+        justify-content: space-between;
+    }
+    &__jc-c{
+        justify-content: center;
+    }
+    &__ai-c{
+        align-items: center;
+    }
+    &__jc-end{
+        justify-content: flex-end;
+    }
+}
+.bold{
+    font-size: rem(22);
+    font-weight: 700;
+    @include breakpoint(large){
+        font-size: rem(26);
+        
+    }
+
+}
+.para{
+    font-size: rem(16);
+    font-weight:400;
+    color: gray;
+}
+.special{
+    background-color: #142850;
+    color: white;
+    text-align: center;
+    width: rem(60);
+    border-radius: rem(30);
+    display: inline-block;
+    margin: 0 rem(10) 0 rem(5);
+}
+.works{
+    font-size: rem(22);
+}
+//For Grid
+.grid{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    &__ji-c{
+        justify-items: center;
+    }
+    &__ai-c{
+        align-items: center;
+    }
+    @include breakpoint(large){
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+//Hide
+.hide-for-mobile{
+    @include breakpoint-down(medium){
+        display: none;
+    }
+}
+
+
+.hide-for-desktop{
+    @include breakpoint(large){
+        display: none;
+    }
+}

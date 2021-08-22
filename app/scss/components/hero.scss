@@ -1,0 +1,72 @@
+@use '../util' as *;
+
+//@include breakpoint(large)
+.hero{
+    @include breakpoint-down(medium){
+        margin-top: rem(36);
+        img{
+            margin-bottom: rem(36);
+        }
+        &__info{
+            p:nth-child(1){
+                font-weight: 700;
+                font-size: rem(32);
+                padding: 0 rem(20);
+            }
+            p:nth-child(2){
+                color: gray;
+                font-weight:400;
+                font-size:rem(16);
+                padding: 0 rem(24);
+            }
+            text-align: center;
+            &--btn{
+                margin-top: rem(27);
+                width: rem(208);
+                height: rem(47);
+                background-color: var(--button-color);
+                color: #fff;
+                border-style: none;
+                
+            }
+        }
+
+    }
+    @include breakpoint(large){
+        margin:0 rem(183);
+        height: 70vh;
+        img{
+            order: 2;
+            margin-top: rem(152);
+            padding-left:rem(183);
+        }
+        &__info{
+            
+            margin-top: rem(152);
+            
+            order: 1;
+            align-self: center;
+            p:nth-child(1){
+                color: black;
+                font-size: rem(44);
+                font-weight: 700;
+
+            }
+            p:nth-child(2){
+                color: gray;
+                font-weight: 400;
+                line-height: rem(23);
+                font: rem(16);
+            }
+            &--btn{
+                margin-top: rem(38);
+                width: rem(208);
+                height: rem(47);
+                background-color: var(--button-color);
+                color: #fff;
+                border-style: none;
+            }
+        }
+        
+    }
+}

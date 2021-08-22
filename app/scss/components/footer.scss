@@ -1,0 +1,35 @@
+@use '../util' as *;
+
+.footer{
+ text-align: center;
+margin-top: rem(60);
+@include breakpoint(large){
+    margin-top: -100px;
+}
+.footer__socials{
+    width: 30%;
+    margin: auto auto;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(4,1fr);
+    @include breakpoint(large){
+        a{
+            img{
+                width: rem(30);
+                height: rem(30);
+            }
+        }
+    }
+    @include breakpoint-down(medium){
+        width: 80%;
+        gap: 0 rem(20);
+        a{
+            img{
+                width: rem(35);
+                height: rem(35);
+            }
+        }
+    }
+
+}
+}

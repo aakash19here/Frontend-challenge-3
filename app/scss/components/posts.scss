@@ -1,0 +1,46 @@
+@use '../util' as *;
+
+.posts{
+    background-color: var(--secondary-bg);
+    @include breakpoint-down(medium){
+        margin-top: rem(60);
+        padding: rem(22) rem(20);
+        &__top{
+            justify-content: center;
+            padding: 0 rem(17);
+        }  
+        &__grid{
+            gap: rem(10) 0;
+            height: 100%;
+            &--one,&--two{
+                padding: rem(20);
+                background-color: white;
+                
+            }
+        } 
+    }
+
+    @include breakpoint(large){
+        margin-top: rem(70);
+        height: 60vh;
+        padding:rem(27) rem(146) 0 rem(146);
+        &__top{
+            
+            a{
+            color: #00A8CC;
+            text-decoration: underline;
+            }
+        }
+        &__grid{
+            gap: rem(20);
+            height: 40vh;
+            &--one,&--two{
+                padding: rem(20);
+                background-color: white;
+                
+            }
+        }
+    }
+
+    
+}

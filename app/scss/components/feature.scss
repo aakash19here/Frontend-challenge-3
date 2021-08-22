@@ -1,0 +1,51 @@
+@use '../util' as *;
+//@include breakpoint(large)
+//@include breakpoint-down(medium)
+
+
+.feature{
+    hr{
+        border-top-style: none;
+        opacity: 0.4;
+        color: gray;
+        height: 1px;
+        width:  60% ;
+        
+    }
+    @include breakpoint-down(medium){
+        .works{
+            text-align: center;
+        }
+        &__image{
+            text-align: center;
+        }
+        &__dashboard,&__portraits,&__malayalam{
+            &--description{
+                margin-top: -20px;
+                padding-left: rem(32);
+                padding-right: rem(28);
+                .para{
+                    font-size: rem(16);
+                }
+            }
+        }
+    }
+    @include breakpoint(large){
+        padding: rem(30) rem(145) rem(145) rem(270);
+        &__dashboard,&__portraits,&__malayalam{
+            height: 25vh;
+            grid-template-columns: 246px 1fr;
+            &--description{
+                padding-left: rem(18);
+            }
+        
+        }
+
+
+    
+    
+    
+//
+    
+        }
+}

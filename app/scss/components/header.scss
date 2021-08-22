@@ -1,0 +1,39 @@
+@use '../util' as *;
+
+
+//@include breakpoint(large)
+
+
+.header{
+    
+    height: 6.35vh;
+    width: 100%;
+    &__nav{
+        @include breakpoint(large){
+            margin-top: rem(27);
+            margin-right: rem(60);    
+        }
+        
+        a{
+            color: black;
+            font-weight: 500;
+            font-size: rem(20);
+            &:not(:last-child){
+                margin-right: rem(40);
+            }
+            
+        }
+        &--hamburger{
+            margin-right: rem(18);
+            margin-top: rem(20);
+            span{
+                display: block;
+                background-color: gray;
+                width: rem(26);
+                height: rem(2);
+                margin-top: rem(8);
+                
+            }
+        }
+    }
+}
